@@ -36,7 +36,7 @@ public class InteractiveInput {
                 }
 
                 System.out.printf("%s: %.2f -> %.2f%n", operation, coin, result);
-            } catch (IllegalArgumentException e) {
+            } catch (ConvertException e) {
                 System.out.println("Ошибка при ковертации: " + e.getMessage());
             } catch (Exception e) {
                 System.out.println("Неизвестная ошибка: " + e.getMessage());

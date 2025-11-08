@@ -31,7 +31,7 @@ public static double convert(double coin, Currency from, Currency to)
 - Converted amount in the target currency (as double).
 
 #### Throws
-`IllegalArgumentException` if coin < 0, or currencies are invalid
+`ConvertException` if coin < 0, or currencies are invalid
 
 #### Logic
 1. Converts the input amount to RUB: `coin × from.getRate()`;
