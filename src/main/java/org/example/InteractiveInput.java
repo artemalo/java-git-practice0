@@ -14,7 +14,7 @@ public class InteractiveInput {
 
         while (running) {
             try {
-                System.out.print("\nВыберите операцию (1-2): ");
+                System.out.print("\nВыберите операцию (1-4): ");
                 int choice = Integer.parseInt(scanner.next());
                 System.out.print("Введите сумму: ");
                 double coin = Double.parseDouble(scanner.next());
@@ -28,7 +28,15 @@ public class InteractiveInput {
                         break;
                     case 2:
                         result = ConvertRUB.convert(coin, Currency.DOLLAR, Currency.RUB);
-                        operation = "RUB -> USD";
+                        operation = "USD -> RUB";
+                        break;
+                    case 3:
+                        result = ConvertRUB.convert(coin, Currency.RUB, Currency.EUR);
+                        operation = "RUB -> EUR";
+                        break;
+                    case 4:
+                        result = ConvertRUB.convert(coin, Currency.EUR, Currency.RUB);
+                        operation = "EUR -> RUB";
                         break;
                     default:
                         System.out.println("Неверный выбор операции!");
@@ -53,8 +61,12 @@ public class InteractiveInput {
 
     private static void printMenu() {
         System.out.println("=== static КОНВЕРТЕР ВАЛЮТ ===");
+
         System.out.println("1. RUB -> USD");
         System.out.println("2. USD -> RUB");
+
+        System.out.println("3. RUB -> EUR");
+        System.out.println("4. EUR -> RUB");
     }
 
 }
