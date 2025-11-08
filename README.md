@@ -17,25 +17,28 @@ System.out.println(amountInDollars); // ~11.11 (1000RUB → 11.11USD)
 
 ## API Reference
 ### class `ConvertRUB`
-#### Static method:
+#### Static method
 ```java
 public static double convert(double coin, Currency from, Currency to)
 ```
 
-#### Parameters:
-- `coin` — amount in the source currency;
-- `from` — source `Currency` enum value;
-- `to` — target `Currency` enum value.
+#### Parameters
+- `coin` — amount in the source currency (must be ≥ 0);
+- `from` — source `Currency` enum value (cannot be null);
+- `to` — target `Currency` enum value (cannot be null, rate must be > 0).
 
-#### Returns:
+#### Returns
 - Converted amount in the target currency (as double).
 
-#### Logic:
+#### Throws
+`IllegalArgumentException` if coin < 0, or currencies are invalid
+
+#### Logic
 1. Converts the input amount to RUB: `coin × from.getRate()`;
 2. Converts RUB to the target currency: `rubles / to.getRate()`.
 
 ### enum `Currency`
-#### Supported currencies:
+#### Supported currencies
 - `RUB` — Russian Ruble (rate: 1);
 - `DOLLAR` — US Dollar (rate: 90RUB per 1USD).
 
