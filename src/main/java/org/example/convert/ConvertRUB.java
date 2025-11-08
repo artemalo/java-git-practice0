@@ -9,7 +9,7 @@ public final class ConvertRUB {
      * @return converted amount
      * @throws IllegalArgumentException if coin < 0, or currencies are invalid
      */
-    public static double convert(double coin, Currency from, Currency to) {
+    public static double convert(double coin, Currency from, Currency to) throws IllegalArgumentException {
         if (coin < 0) {
             throw new IllegalArgumentException("Amount must be non‑negative");
         }
