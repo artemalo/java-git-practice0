@@ -31,7 +31,7 @@ public class InteractiveInput {
                         operation = "RUB -> USD";
                         break;
                     default:
-                        System.out.println("Неверный выбор!");
+                        System.out.println("Неверный выбор операции!");
                         continue;
                 }
 
@@ -41,13 +41,14 @@ public class InteractiveInput {
                 int continueChoice = Integer.parseInt(scanner.next());
                 running = (continueChoice == 1);
             } catch (ConvertException e) {
-                System.out.println("Ошибка при ковертации: " + e.getMessage());
+                System.out.print("Ошибка при ковертации: " + e.getMessage() + ". ");
+                System.out.println("Попробуйте снова...");
             } catch (Exception e) {
-                System.out.println("Неизвестная ошибка: " + e.getMessage());
-            } finally {
+                System.out.print("Неизвестная ошибка: " + e.getMessage()  + ". ");
                 System.out.println("Попробуйте снова...");
             }
         }
+        scanner.close();
     }
 
     private static void printMenu() {
