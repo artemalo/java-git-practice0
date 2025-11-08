@@ -36,6 +36,10 @@ public class InteractiveInput {
                 }
 
                 System.out.printf("%s: %.2f -> %.2f%n", operation, coin, result);
+
+                System.out.print("Продолжить? (1-да, 0-нет): ");
+                int continueChoice = Integer.parseInt(scanner.next());
+                running = (continueChoice == 1);
             } catch (ConvertException e) {
                 System.out.println("Ошибка при ковертации: " + e.getMessage());
             } catch (Exception e) {
