@@ -2,7 +2,8 @@ package org.example.convert;
 
 public enum Currency {
     RUB(1),
-    DOLLAR(90);
+    DOLLAR(90),
+    EUR(100);
 
     private final double rate;
 
