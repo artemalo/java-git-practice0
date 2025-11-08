@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.convert.*;
-
 import java.util.Scanner;
 
 public class InteractiveInput {
@@ -11,7 +10,6 @@ public class InteractiveInput {
         printMenu();
 
         boolean running = true;
-
         while (running) {
             try {
                 System.out.print("\nВыберите операцию (1-4): ");
@@ -68,5 +66,4 @@ public class InteractiveInput {
         System.out.println("3. RUB -> EUR");
         System.out.println("4. EUR -> RUB");
     }
-
 }
