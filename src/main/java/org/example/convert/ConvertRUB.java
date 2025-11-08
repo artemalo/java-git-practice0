@@ -16,7 +16,7 @@ public final class ConvertRUB {
         if (from == null || to == null) {
             throw new IllegalArgumentException("Currency cannot be null");
         }
-        if (to.getRate() > 0) {
+        if (to.getRate() < 0) {
             throw new IllegalArgumentException("Target currency rate cannot be less than zero");
         }
 
