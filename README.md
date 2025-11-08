@@ -41,6 +41,7 @@ public static double convert(double coin, Currency from, Currency to)
 #### Supported currencies
 - `RUB` — Russian Ruble (rate: 1);
 - `DOLLAR` — US Dollar (rate: 90RUB per 1USD).
+- `EUR` — EC Euro (rate: 100RUB per 1EUR).
 
 Each currency has a fixed exchange rate relative to RUB (set in the enum constructor).
 #### Configuration
@@ -50,7 +51,7 @@ Exchange rates are hardcoded in the Currency enum. To update rates:
 
 Example:
 ```java
-DOLLAR(95), // Updated rate: 95RUB per 1USD
+DOLLAR(90), // Updated rate: 90RUB per 1USD
 ```
 ## License
 This project is unlicensed. Use at your own risk ;)
