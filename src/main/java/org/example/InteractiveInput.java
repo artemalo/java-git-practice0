@@ -15,7 +15,7 @@ public class InteractiveInput {
         while (running) {
             try {
                 System.out.print("\nВыберите операцию (1-2): ");
-                int choice = scanner.nextInt();
+                int choice = Integer.parseInt(scanner.next());
                 System.out.print("Введите сумму: ");
                 double coin = Double.parseDouble(scanner.next());
 
